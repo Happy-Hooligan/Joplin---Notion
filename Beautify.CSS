@@ -68,7 +68,7 @@ ul ul ul { list-style-type: square; }
 ol ol { list-style-type: lower-alpha; }
 ol ol ol { list-style-type: lower-roman; }
 
-/* Remove default marker so we can customize */
+/* Remove default marker */
 ul li {
     position: relative;
     list-style: none;
