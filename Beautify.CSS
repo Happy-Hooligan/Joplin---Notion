@@ -1,0 +1,275 @@
+/* Styled Table of Contents */
+.toc-container {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 1em 1.2em;
+    margin: 2em 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.toc-container h2 {
+    margin-top: 0;
+    color: #3b82f6;
+    font-size: 1.2em;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.3em;
+}
+
+.toc-container ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.5em 0 0 0;
+}
+
+.toc-container li {
+    margin-bottom: 0.5em;
+}
+
+.toc-container a {
+    text-decoration: none;
+    color: #d0eaff;
+    transition: color 0.2s ease-in-out;
+}
+
+.toc-container a:hover {
+    color: #22c55e;
+    text-decoration: underline;
+}
+
+
+
+
+
+/* Sticky table headers */
+table.sticky-table thead th {
+    position: sticky;
+    top: 0;
+    background-color: #2a2a2a;
+    z-index: 2;
+}
+
+/* Optional: add subtle border or shadow to make the stickiness obvious */
+table.sticky-table thead th {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Base list styles */
+ul, ol {
+    margin: 1em 0;
+    padding-left: 1.5em;
+}
+
+/* Nested list styles */
+ul ul { list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+ol ol { list-style-type: lower-alpha; }
+ol ol ol { list-style-type: lower-roman; }
+
+/* Remove default marker so we can customize */
+ul li {
+    position: relative;
+    list-style: none;
+    margin-bottom: 0.6em;
+    padding-left: 2em; /* Gives breathing room from bullet */
+    line-height: 1.6;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Base bullet (level 1) */
+ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background 0.3s ease;
+    opacity: 0.9;
+    transform: scale(1);
+}
+
+/* Hover effects for UL list items */
+ul li:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 6px;
+    padding-left: 2.2em; /* Slight bump to spacing */
+    box-shadow: 0 0 6px rgba(59, 130, 246, 0.2);
+}
+
+ul li:hover::before {
+    transform: scale(1.25);
+    background-color: #22c55e;
+    filter: brightness(1.2);
+}
+
+/* Level 2 bullets */
+ul ul li::before {
+    background-color: #10b981;
+    width: 0.4em;
+    height: 0.4em;
+}
+
+/* Level 3 bullets */
+ul ul ul li::before {
+    background-color: #f59e0b;
+    width: 0.3em;
+    height: 0.3em;
+}
+
+/* Ordered list styles */
+ol li {
+    margin-bottom: 0.6em;
+    padding-left: 0.5em;
+    line-height: 1.6;
+}
+
+ol li::marker {
+    color: #e76f51;
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+ol li:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+/* Blockquote */
+blockquote {
+    border-left: 5px solid #62c1ff;
+    background: #2d2d2d;
+    padding: 1em;
+    border-radius: 8px;
+    font-style: normal;
+    color: #d0eaff;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    width: 1.2em;
+    height: 1.2em;
+    accent-color: #00b894;
+}
+
+/* Section spacing */
+section + section {
+    margin-top: 2em;
+}
+
+/* Body styles */
+body {
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #e0e0e0;
+    background-color: #1e1e1e;
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    font-weight: 600;
+    line-height: 1.4;
+    color: #ffffff;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2em;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.3em;
+}
+
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
+h4 { font-size: 1.1em; }
+
+/* Paragraphs */
+p {
+    margin-bottom: 1.2em;
+    color: #d0d0d0;
+}
+
+/* List item base */
+li {
+    margin-bottom: 0.4em;
+}
+
+/* Inline code */
+code {
+    background: #2a2a2a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "Fira Code", monospace;
+    color: #f8f8f2;
+}
+
+/* Code blocks */
+pre code {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 16px;
+    display: block;
+    overflow-x: auto;
+    border-radius: 6px;
+}
+
+/* Table styling */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 1.5em 0;
+    background-color: #1f1f1f;
+    border: 1px solid #444;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    padding: 0.8em;
+    font-weight: 600;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+td {
+    padding: 0.75em;
+    color: #ddd;
+    border-top: 1px solid #333;
+}
+
+/* Zebra striping */
+tr:nth-child(even) td {
+    background-color: #262626;
+}
+
+/* Table row hover + active */
+tr:hover td {
+    background-color: #2e2e2e;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+tr:active td {
+    background-color: #3a3a3a;
+    transition: background-color 0.1s ease-in-out;
+}
+
+/* Horizontal rule */
+hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 2em 0;
+}
