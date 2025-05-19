@@ -8,4 +8,4 @@ CSS file for beautifying Joplin's rendered environment
   - Spacing between headers
   - And more
 
-Drop into Tools > Options > Appearance > "Show Advanced" > "Custom StyleSheet for Rendered Markdown"
+Copy into Tools > Options > Appearance > "Show Advanced" > "Custom StyleSheet for Rendered Markdown"
